@@ -30,6 +30,7 @@ Video Frame | A single instances of video in the form of a picture
 Ascii Text | A *video frames* ascii art text in the form of a string
 Ascii Frame| An *ascii text* converterd into a picture
 Ascii Video | All *ascii frames* compiled into a video
+
 ![Flow chart](https://github.com/mazy1998/asciiVideo/blob/master/flowchart.png?raw=true)
 
 

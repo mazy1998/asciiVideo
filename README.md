@@ -12,7 +12,7 @@ A quick and easy open source python code to convert a video into a work of ascii
 4. From here you can change the gamma of the asciiVideo for more or less details.
 	1. ```cat.setGamma(1.1)``` to add more dark details.
 	2. ```cat.setGamma(1.9)``` to get rid of dark details like shadows.
-	3. ![gamma comparison](https://github.com/mazy1998/asciiVideo/blob/master/gammacomparison.png?raw=true
+	3. ![gamma comparison](https://github.com/mazy1998/asciiVideo/blob/master/gammacomparison.png?raw=true)
 5. You can also change the rotation of the video using.
 	1. ```cat.setRotation(angle)```
 	2. ```cat.setRotation(180)``` can be used on upside down videos

@@ -21,12 +21,12 @@ import natsort
 ## cat.setGamme(int gamma)
 ## cat.rotation(int angle)
 ## render the object
-## cat.render()
+## cat.render("<outputname>")
 ## delete unnecessary files
 ## cat.close()
 
 
-class asciiArt:
+class asciiVideo:
     
     gamma = 1.55
     scale = .1
@@ -166,10 +166,10 @@ class asciiArt:
     def transform(self):
         
         
-        createFolder(self.asciiFolder)
+        self.createFolder(self.asciiFolder)
         
         #returns item names in video frame folder
-        images = returnFolderItems(self.videoFolder)
+        images = self.returnFolderItems(self.videoFolder)
         
         
         # for each frames of the video this loop runs the ascii algorithm
@@ -206,7 +206,7 @@ class asciiArt:
             pass
         
         path = self.asciiFolder
-        images = returnFolderItems(path)
+        images = self.returnFolderItems(path)
          
         frame = cv2.imread(os.path.join(path+"/", images[0]))
         height, width, layers = frame.shape
@@ -231,11 +231,10 @@ class asciiArt:
     #set rotation of frame and return sample
     def setRotation(self, angle):
         self.rotation = angle
-        return self.sample(self.frame)                
+        return self.sample(self.frame)       
 
-    
-
-
-
-
-
+    def returnFolderItems(self,path):
+        image_folder = path+"/"
+        images = [img for img in os.listdir(image_folder) if img.endswith(".png")]
+        images = natsort.natsorted(images)
+        return images

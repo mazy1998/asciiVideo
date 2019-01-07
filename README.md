@@ -4,14 +4,13 @@ A quick and easy open source python code to convert a video into a work of ascii
 
 # How to use asciiVideo.py
 
-
 1. First run the asciiVideo.py file in the same directory of a video you wish to convert
 2. Then create an object with the asciiArt initializer.
 	1. ```cat = asciiArt("videoofcat.mp4") ```
 3. This will then display a picture of the video frame and its ascii conterpart.
 4. From here you can change the gamma of the asciiVideo for more or less details.
-	1. ```cat.setGamma(1.1)``` to add more dark details.
-	2. ```cat.setGamma(1.9)``` to get rid of dark details like shadows.
+	1. ```cat.setGamma(1)``` to add more dark details.
+	2. ```cat.setGamma(1.5)``` to get rid of dark details like shadows.
 	3. ![gamma comparison](https://github.com/mazy1998/asciiVideo/blob/master/gammacomparison.jpg?raw=true)
 5. You can also change the rotation of the video using.
 	1. ```cat.setRotation(angle)```
@@ -23,4 +22,17 @@ A quick and easy open source python code to convert a video into a work of ascii
 	1. ```cat.close()```
 	2. This gets rid of all unecessary memory used to make the video
 8. Finally you can share the video with friends and loved ones.
+
+# How the code works
+Terminology | definition 
+------------ | -------------
+Video Frame | A single instances of video in the form of a picture
+Ascii Text | A *video frames* ascii art text in the form of a string
+Ascii Frame| An *ascii text* converterd into a picture
+Ascii Video | All *ascii frames* compiled into a video
+![Flow chart](https://github.com/mazy1998/asciiVideo/blob/master/flowchart.png?raw=true)
+
+
+
+
 
